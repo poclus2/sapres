@@ -13,6 +13,8 @@
     "vite": "^8.0.12"
   },
   "devDependencies": {
+    "@emnapi/core": "^1.10.0",
+    "@emnapi/runtime": "^1.10.0",
     "sharp": "^0.34.5",
     "vite-plugin-image-optimizer": "^2.0.3"
   }
