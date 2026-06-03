@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Sapres Sarl</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .page-header {
+        padding: 8rem 0 4rem;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        margin-bottom: 1.5rem;
+      }
+      .banner-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: var(--radius-xl);
+        margin-bottom: 6rem;
+      }
+      
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 6rem;
+      }
+      .service-card {
+        background: white;
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        gap: 2rem;
+        transition: var(--transition);
+      }
+      .service-card:hover {
+        box-shadow: var(--shadow-md);
+        border-color: var(--color-primary);
+        transform: translateY(-5px);
+      }
+      .service-card-img {
+        width: 40%;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+      }
+      .service-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .service-tag {
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .service-card p {
+        color: var(--color-text-light);
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+      }
+      
+      @media (max-width: 1024px) {
+        .services-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 600px) {
+        .service-card { flex-direction: column; }
+        .service-card-img { width: 100%; height: 200px; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header sticky" id="main-header" style="position: sticky; background: white; border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <a href="/" class="logo">
+          <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+          Sapres<span>Sarl</span>
+        </a>
+        <nav class="nav-links" style="background: var(--color-bg-alt); box-shadow: none;">
+          <a href="/">Accueil</a>
+          <a href="/about.html">À propos</a>
+          <a href="/services.html" class="active">Services</a>
+          <a href="/shop.html">Boutique</a>
+        </nav>
+        <div class="header-actions">
+          <a href="/cart.html" class="cart-icon" style="background: var(--color-bg-alt); box-shadow: none;">
+            <i data-lucide="shopping-cart" style="width: 20px;"></i>
+            <span class="cart-count" id="global-cart-count">0</span>
+          </a>
+          <a href="/contact.html" class="btn btn-outline">Contactez-nous</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Des Solutions Énergétiques Durables Pour Chaque Besoin</h1>
+        <p style="color: var(--color-text-light);">Sapres Sarl vous accompagne de la conception à la maintenance de vos systèmes solaires et de sécurité.</p>
+      </div>
+      
+      <img src="https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=1920&q=80" alt="Panneaux solaires" class="banner-img">
+      
+      <div class="text-center mb-6">
+        <div class="tagline" style="justify-content: center;">Nos Services</div>
+        <h2 class="h2-title">Découvrez Notre Expertise</h2>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1584277261846-c6a1672dd979?auto=format&fit=crop&w=500&q=80" alt="Solaire Domestique" class="service-card-img">
+          <div class="service-card-content">
+            <div class="service-tag">Résidentiel & Commercial</div>
+            <h3>Installation de Panneaux Solaires</h3>
+            <p>Conception sur mesure pour maximiser votre rendement énergétique et réduire vos factures.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;">Voir détail <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&w=500&q=80" alt="Batteries" class="service-card-img">
+          <div class="service-card-content">
+            <div class="service-tag">Stockage & Autonomie</div>
+            <h3>Stockage d'Énergie & Batteries</h3>
+            <p>Des systèmes de batteries performants pour garantir une alimentation continue jour et nuit.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;">Voir détail <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=500&q=80" alt="Solaire Industriel" class="service-card-img">
+          <div class="service-card-content">
+            <div class="service-tag">Bureaux, Hôtels, Industrie</div>
+            <h3>Systèmes Solaires Commerciaux</h3>
+            <p>Déploiement à grande échelle pour sécuriser l'alimentation des entreprises exigeantes.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;">Voir détail <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=500&q=80" alt="Pompage Solaire" class="service-card-img">
+          <div class="service-card-content">
+            <div class="service-tag">Agriculture & Eau Potable</div>
+            <h3>Pompage d'Eau Solaire</h3>
+            <p>Installation de pompes immergées fonctionnant à l'énergie solaire pour puits et forages.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;">Voir détail <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=500&q=80" alt="Sécurité" class="service-card-img">
+          <div class="service-card-content">
+            <div class="service-tag">Protection & Contrôle</div>
+            <h3>Sécurité Électronique</h3>
+            <p>Vidéosurveillance HD, contrôle d'accès biométrique et sécurité incendie complète.</p>
+            <a href="#" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem;">Voir détail <i data-lucide="arrow-right" style="width: 16px;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- How it works (copied from index to match image 2) -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="text-center mb-6">
+          <div class="tagline" style="justify-content: center;">Comment ça marche</div>
+          <h2 class="h2-title">De La Planification À<br>L'Alimentation De Votre Domicile</h2>
+        </div>
+        
+        <div class="how-grid">
+          <div class="how-card">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" alt="Step 1">
+            <div class="how-content">
+              <h4><span>01.</span> Consultation Énergie</h4>
+              <p style="color: var(--color-text-light); font-size: 0.875rem;">Analyse de votre consommation actuelle et de vos objectifs.</p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=500&q=80" alt="Step 2">
+            <div class="how-content">
+              <h4><span>02.</span> Design du Système</h4>
+              <p style="color: var(--color-text-light); font-size: 0.875rem;">Sélection des meilleurs équipements pour votre configuration.</p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="https://images.unsplash.com/photo-1621501103258-3e440b8a1c93?auto=format&fit=crop&w=500&q=80" alt="Step 3">
+            <div class="how-content">
+              <h4><span>03.</span> Installation</h4>
+              <p style="color: var(--color-text-light); font-size: 0.875rem;">Mise en place rapide et soignée par notre équipe.</p>
+            </div>
+          </div>
+          <div class="how-card">
+            <img src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=500&q=80" alt="Step 4">
+            <div class="how-content">
+              <h4><span>04.</span> Activation</h4>
+              <p style="color: var(--color-text-light); font-size: 0.875rem;">Mise en service et formation sur l'utilisation du système.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bottom-cta" style="background-image: none; background-color: var(--color-bg-alt); padding: 4rem 0; color: var(--color-text);">
+      <div class="container text-center">
+        <h2 style="color: var(--color-text);">Prêt à bâtir un avenir durable ?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Rejoignez-nous dans notre mission pour une énergie propre.</p>
+        <a href="/contact.html" class="btn btn-primary">Contactez-nous <i data-lucide="arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+              Sapres<span>Sarl</span>
+            </div>
+            <p class="footer-text">Restez informé sur l'énergie solaire, les conseils de l'industrie et nos dernières offres.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Votre adresse email">
+              <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">S'inscrire</button>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Menu</h4>
+            <ul class="footer-links">
+              <li><a href="/">Accueil</a></li>
+              <li><a href="/about.html">À propos</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/shop.html">Boutique</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:contact@sapres-sarl.com">contact@sapres-sarl.com</a></li>
+              <li><a href="tel:+237699991301">+237 6 99 99 13 01</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Adresses</h4>
+            <ul class="footer-links">
+              <li>Elig-Essono, Yaoundé<br>Cameroun</li>
+              <li style="margin-top: 1rem;">Bessengue, Douala<br>Cameroun</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div>&copy; 2026 Sapres Sarl. Tous droits réservés.</div>
+          <div style="display: flex; gap: 2rem;">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Termes & Conditions</a>
+          </div>
+        </div>
+      </div>
+      <div class="watermark">SAPRES</div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

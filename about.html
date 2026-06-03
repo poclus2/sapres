@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos | Sapres Sarl</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .page-header {
+        padding: 8rem 0 4rem;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        margin-bottom: 1.5rem;
+      }
+      .banner-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: var(--radius-xl);
+        margin-bottom: 4rem;
+      }
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        text-align: center;
+        padding-bottom: 4rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+      .stat-item h3 {
+        font-size: 3rem;
+        color: var(--color-text);
+      }
+      .stat-item p {
+        color: var(--color-text-light);
+        font-weight: 600;
+      }
+      
+      .journey-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        padding: 6rem 0;
+      }
+      .journey-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--radius-xl);
+      }
+      
+      .timeline {
+        padding: 6rem 0;
+      }
+      .timeline-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+      }
+      .timeline-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border-left: 2px dashed var(--color-border);
+        padding-left: 2rem;
+      }
+      .timeline-item {
+        position: relative;
+        background: var(--color-bg-alt);
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+      }
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -2rem;
+        top: 2rem;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: var(--color-primary);
+        border: 4px solid white;
+        border-radius: 50%;
+        box-shadow: var(--shadow-sm);
+      }
+      .timeline-year {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-text-light);
+        margin-bottom: 1rem;
+      }
+      
+      .crew {
+        padding: 6rem 0;
+      }
+      .crew-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      .crew-member {
+        text-align: center;
+      }
+      .crew-member img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+        margin-bottom: 1rem;
+        background: var(--color-bg-alt);
+      }
+      .crew-member h4 { font-size: 1.25rem; }
+      .crew-member p { color: var(--color-text-light); }
+      
+      @media (max-width: 768px) {
+        .stats-row { grid-template-columns: 1fr 1fr; }
+        .journey-split { grid-template-columns: 1fr; }
+        .timeline-grid { grid-template-columns: 1fr; }
+        .crew-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header sticky" id="main-header" style="position: sticky; background: white; border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <a href="/" class="logo">
+          <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+          Sapres<span>Sarl</span>
+        </a>
+        <nav class="nav-links" style="background: var(--color-bg-alt); box-shadow: none;">
+          <a href="/">Accueil</a>
+          <a href="/about.html" class="active">À propos</a>
+          <a href="/services.html">Services</a>
+          <a href="/shop.html">Boutique</a>
+        </nav>
+        <div class="header-actions">
+          <a href="/cart.html" class="cart-icon" style="background: var(--color-bg-alt); box-shadow: none;">
+            <i data-lucide="shopping-cart" style="width: 20px;"></i>
+            <span class="cart-count" id="global-cart-count">0</span>
+          </a>
+          <a href="/contact.html" class="btn btn-outline">Contactez-nous</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Renforcer Les Foyers Et Les Entreprises Avec L'Énergie Durable</h1>
+        <p style="color: var(--color-text-light);">Une approche innovante de l'énergie solaire et de la sécurité électronique au Cameroun, bâtie sur l'expertise et la confiance.</p>
+      </div>
+      
+      <img src="https://images.unsplash.com/photo-1508514177221-188b1c77eca2?auto=format&fit=crop&w=1920&q=80" alt="Team" class="banner-img">
+      
+      <div class="stats-row">
+        <div class="stat-item">
+          <h3>1,200+</h3>
+          <p>Installations Réussies</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Clients Satisfaits</p>
+        </div>
+        <div class="stat-item">
+          <h3>30%-60%</h3>
+          <p>D'économies générées</p>
+        </div>
+        <div class="stat-item">
+          <h3>15+</h3>
+          <p>Années d'Expertise</p>
+        </div>
+      </div>
+      
+      <div class="journey-split">
+        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80" alt="Journey" class="journey-img">
+        <div>
+          <div class="tagline">Notre Histoire</div>
+          <h2 class="h2-title">Notre Parcours Vers Un Avenir Plus Vert</h2>
+          <p style="color: var(--color-text-light); margin-bottom: 2rem;">Sapres Sarl s'engage à fournir des solutions fiables et durables pour répondre aux défis énergétiques du continent.</p>
+          
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="background: var(--color-primary); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i data-lucide="check" style="width: 14px;"></i></div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Vision</h4>
+              <p style="color: var(--color-text-light); font-size: 0.875rem;">Devenir le leader incontesté des énergies renouvelables en Afrique centrale.</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1rem;">
+            <div style="background: var(--color-primary); color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i data-lucide="check" style="width: 14px;"></i></div>
+            <div>
+              <h4 style="margin-bottom: 0.25rem;">Mission</h4>
+              <p style="color: var(--color-text-light); font-size: 0.875rem;">Démocratiser l'accès à une énergie propre, abordable et sécurisée pour tous.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-grid">
+          <div>
+            <div class="tagline">Évolution</div>
+            <h2 class="h2-title">Notre Évolution : Bâtir Un Avenir Vert</h2>
+            <p style="color: var(--color-text-light);">Découvrez les grandes étapes qui ont marqué la croissance et l'expansion de Sapres Sarl au fil des années.</p>
+          </div>
+          
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-year">2009</div>
+              <h4>Création de Sapres Sarl</h4>
+              <p style="color: var(--color-text-light);">Lancement de l'entreprise avec une première agence à Yaoundé, focalisée sur la sécurité électronique.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2014</div>
+              <h4>Expansion vers le Solaire</h4>
+              <p style="color: var(--color-text-light);">Intégration des solutions photovoltaïques pour répondre aux besoins croissants en énergie fiable.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2018</div>
+              <h4>Ouverture à Douala</h4>
+              <p style="color: var(--color-text-light);">Inauguration de notre représentation à Bessengue pour mieux desservir la région du Littoral.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2023</div>
+              <h4>Lancement de la Boutique en Ligne</h4>
+              <p style="color: var(--color-text-light);">Digitalisation de nos services pour permettre la commande d'équipements à distance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="crew">
+        <div class="text-center mb-6">
+          <div class="tagline" style="justify-content: center;">Notre Équipe</div>
+          <h2 class="h2-title">L'Équipe Sapres</h2>
+        </div>
+        
+        <div class="crew-grid">
+          <div class="crew-member">
+            <img src="https://i.pravatar.cc/300?img=11" alt="Directeur">
+            <h4>Jean-Marc N.</h4>
+            <p>Directeur Général</p>
+          </div>
+          <div class="crew-member">
+            <img src="https://i.pravatar.cc/300?img=5" alt="Ingénieur">
+            <h4>Marie T.</h4>
+            <p>Ingénieure Solaire</p>
+          </div>
+          <div class="crew-member">
+            <img src="https://i.pravatar.cc/300?img=33" alt="Technicien">
+            <h4>Paul D.</h4>
+            <p>Chef Technicien Sécurité</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <section class="bottom-cta" style="background-image: none; background-color: var(--color-bg-alt); padding: 4rem 0; color: var(--color-text);">
+      <div class="container text-center">
+        <h2 style="color: var(--color-text);">Prêt à bâtir un avenir durable ?</h2>
+        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Rejoignez-nous dans notre mission pour une énergie propre.</p>
+        <a href="/contact.html" class="btn btn-primary">Contactez-nous <i data-lucide="arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+              Sapres<span>Sarl</span>
+            </div>
+            <p class="footer-text">Restez informé sur l'énergie solaire, les conseils de l'industrie et nos dernières offres.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Votre adresse email">
+              <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">S'inscrire</button>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Menu</h4>
+            <ul class="footer-links">
+              <li><a href="/">Accueil</a></li>
+              <li><a href="/about.html">À propos</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/shop.html">Boutique</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:contact@sapres-sarl.com">contact@sapres-sarl.com</a></li>
+              <li><a href="tel:+237699991301">+237 6 99 99 13 01</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Adresses</h4>
+            <ul class="footer-links">
+              <li>Elig-Essono, Yaoundé<br>Cameroun</li>
+              <li style="margin-top: 1rem;">Bessengue, Douala<br>Cameroun</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div>&copy; 2026 Sapres Sarl. Tous droits réservés.</div>
+          <div style="display: flex; gap: 2rem;">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Termes & Conditions</a>
+          </div>
+        </div>
+      </div>
+      <div class="watermark">SAPRES</div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

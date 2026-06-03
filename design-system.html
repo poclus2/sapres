@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sapres — Design System Preview</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body { padding: 40px 0; background: #f0f2f5; }
+    .ds-section { background: white; border-radius: 20px; padding: 48px; margin-bottom: 24px; }
+    .ds-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; margin-top: 24px; }
+    .ds-title { font-family: var(--font-display); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--slate); margin-bottom: 16px; }
+    .swatch { width: 80px; height: 80px; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-size: 10px; font-weight: 700; border: 1px solid rgba(0,0,0,.05); }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- COLORS -->
+  <div class="ds-section">
+    <div class="ds-title">Palette Sapres Sarl</div>
+    <div class="ds-row">
+      <div class="swatch" style="background:var(--green);color:white">green</div>
+      <div class="swatch" style="background:var(--green-light);color:white">green-light</div>
+      <div class="swatch" style="background:var(--green-dark);color:white">green-dark</div>
+      <div class="swatch" style="background:var(--green-tint);color:var(--green-dark);border:1px solid var(--green-dark)">green-tint</div>
+      <div style="width:1px;height:80px;background:var(--border-strong)"></div>
+      <div class="swatch" style="background:var(--navy);color:white">navy</div>
+      <div class="swatch" style="background:var(--navy-mid);color:white">navy-mid</div>
+      <div class="swatch" style="background:var(--slate);color:white">slate</div>
+      <div class="swatch" style="background:var(--slate-light);color:white">slate-light</div>
+      <div style="width:1px;height:80px;background:var(--border-strong)"></div>
+      <div class="swatch" style="background:var(--gray-50);color:var(--navy);border:1px solid var(--border)">gray-50</div>
+      <div class="swatch" style="background:var(--gray-100);color:var(--navy)">gray-100</div>
+      <div class="swatch" style="background:var(--gray-200);color:var(--navy)">gray-200</div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY -->
+  <div class="ds-section">
+    <div class="ds-title">Typographie — Outfit (Display) + DM Sans (Body)</div>
+    <div class="display-1 mb-4">L'Innovation Solaire<br><span class="text-green">au Cameroun</span></div>
+    <div class="display-2 mb-4">Nos Solutions<br><span class="text-slate">Énergétiques</span></div>
+    <div class="heading-1 mb-4">Panneaux Solaires, Batteries, Sécurité</div>
+    <div class="heading-2 mb-4">Services &amp; Équipements Premium</div>
+    <div class="heading-3 mb-4">Installation Professionnelle</div>
+    <p class="body-lg mb-4">Sapres Sarl, Société Africaine de Promotion des Énergies Renouvelables. Nous déployons des systèmes solaires de haute performance et des solutions de sécurité électronique pour particuliers et entreprises au Cameroun.</p>
+    <p class="body-base mb-4">Des panneaux monocristallins haut rendement, des batteries gel et lithium, des pompes immergées solaires et des systèmes de vidéosurveillance certifiés.</p>
+    <p class="body-sm">Yaoundé (Elig-Essono) &amp; Douala (Bessengue) · +237 6 99 99 13 01</p>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="ds-section">
+    <div class="ds-title">Boutons</div>
+    <div class="ds-row">
+      <button class="btn btn-primary btn-lg">Obtenir un Devis <span class="arrow">→</span></button>
+      <button class="btn btn-green btn-lg">Contactez-nous</button>
+      <button class="btn btn-primary">Voir les Services</button>
+      <button class="btn btn-outline">En savoir plus</button>
+      <button class="btn btn-sm btn-primary">Action</button>
+    </div>
+    <div class="ds-row" style="background:var(--navy);padding:20px;border-radius:12px;margin-top:16px">
+      <button class="btn btn-white">Découvrir</button>
+      <button class="btn btn-white btn-lg">Audit Gratuit <span class="arrow">→</span></button>
+      <span class="btn-icon btn-icon-green">☀</span>
+      <span class="btn-icon btn-icon-white">→</span>
+    </div>
+  </div>
+
+  <!-- TAGS -->
+  <div class="ds-section">
+    <div class="ds-title">Tags &amp; Badges</div>
+    <div class="ds-row">
+      <span class="tag tag-default tag-dot">Services</span>
+      <span class="tag tag-green tag-dot">Énergie Propre</span>
+      <span class="tag tag-navy">01 · Installation</span>
+      <div style="background:var(--navy);padding:12px;border-radius:8px;display:flex;gap:8px">
+        <span class="tag tag-glass">· Nos Projets</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="ds-section">
+    <div class="ds-title">Cards</div>
+    <div class="ds-row">
+      <!-- White card -->
+      <div class="card" style="width:240px;padding:28px">
+        <div class="tag tag-green tag-dot mb-4">Résidentiel</div>
+        <div class="heading-3 mb-2">Kit Solaire 1kW</div>
+        <p class="body-sm">Idéal pour un foyer de 2–3 personnes. Inclut panneau + batterie + installation.</p>
+        <div class="mt-6" style="display:flex;align-items:baseline;gap:4px">
+          <span style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--navy)">180 000</span>
+          <span class="body-sm">FCFA</span>
+        </div>
+      </div>
+
+      <!-- Navy card -->
+      <div class="card card-navy" style="width:240px;padding:28px">
+        <div class="mb-4" style="width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px">⚡</div>
+        <div class="heading-3 mb-2" style="color:white">Un choix brillant<br>pour un avenir lumineux</div>
+        <p class="body-sm" style="color:rgba(255,255,255,.6)">Solutions de stockage avancées.</p>
+      </div>
+
+      <!-- Green stat card -->
+      <div class="card card-soft" style="width:240px;padding:28px">
+        <div style="font-size:56px;font-weight:800;font-family:var(--font-display);letter-spacing:-.04em;color:var(--navy);line-height:1">80<span style="font-size:28px;color:var(--green)">%</span></div>
+        <p class="body-sm mt-2">Énergie consommée couverte</p>
+        <div class="mt-4" style="height:1px;background:var(--border)"></div>
+        <div class="mt-4 flex items-center gap-2">
+          <div class="avatar-stack avatar-stack-sm">
+            <img src="https://i.pravatar.cc/40?img=11" alt="">
+            <img src="https://i.pravatar.cc/40?img=12" alt="">
+            <img src="https://i.pravatar.cc/40?img=13" alt="">
+          </div>
+          <span class="body-sm"><strong>331K</strong> clients satisfaits</span>
+        </div>
+      </div>
+
+      <!-- Glass card -->
+      <div class="card card-glass" style="width:240px;padding:28px;background:linear-gradient(135deg,rgba(141,198,63,.12),rgba(255,255,255,.8));">
+        <div class="tag tag-green mb-4">☀ Prêt pour l'Avenir</div>
+        <div class="heading-3">L'Énergie Verte<br><span class="text-green">Fait de l'Impact</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVATAR STACK + STATS -->
+  <div class="ds-section">
+    <div class="ds-title">Composants Utilitaires</div>
+    <div class="ds-row">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div>
+          <p class="ds-title" style="margin-bottom:8px">Avatar Stack</p>
+          <div class="avatar-stack">
+            <img src="https://i.pravatar.cc/60?img=11" alt="">
+            <img src="https://i.pravatar.cc/60?img=12" alt="">
+            <img src="https://i.pravatar.cc/60?img=13" alt="">
+            <img src="https://i.pravatar.cc/60?img=14" alt="">
+          </div>
+        </div>
+        <div>
+          <p class="ds-title" style="margin-bottom:8px">Statistiques</p>
+          <div class="ds-row">
+            <div class="stat"><span class="stat-value">15<span style="color:var(--green)">+</span></span><span class="stat-label">Ans d'Expérience</span></div>
+            <div class="stat"><span class="stat-value">500<span style="color:var(--green)">+</span></span><span class="stat-label">Installations</span></div>
+            <div class="stat"><span class="stat-value">98<span style="color:var(--green)">%</span></span><span class="stat-label">Clients Satisfaits</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO BG PREVIEW -->
+  <div class="ds-section" style="padding:0;overflow:hidden">
+    <div style="background:var(--grad-hero);padding:60px 48px;border-radius:20px">
+      <div class="ds-title">Arrière-plan Hero (dégradé)</div>
+      <div class="display-1 mt-4">Énergie<br><span class="text-green">Solaire</span><br><span class="text-slate" style="font-size:0.65em">au Cameroun</span></div>
+      <div class="mt-6">
+        <button class="btn btn-primary btn-lg">Démarrer <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

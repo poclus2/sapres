@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier | Sapres Sarl</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .page-header {
+        background-color: var(--color-secondary);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+      .page-header h1 {
+        color: white;
+      }
+      .cart-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .cart-items {
+        background: white;
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
+      }
+      .cart-item {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+      .cart-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        margin-right: 1.5rem;
+      }
+      .cart-info {
+        flex-grow: 1;
+      }
+      .cart-info h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+      .cart-price {
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      .cart-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: var(--color-bg-alt);
+        padding: 0.25rem 0.5rem;
+        border-radius: var(--radius-full);
+      }
+      .qty-btn {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: var(--color-text);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: var(--transition);
+      }
+      .qty-btn:hover {
+        background: white;
+      }
+      .cart-summary {
+        background: white;
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
+        height: fit-content;
+      }
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        font-size: 1.125rem;
+      }
+      .summary-total {
+        font-size: 1.5rem;
+        font-weight: 700;
+        border-top: 1px solid var(--color-border);
+        padding-top: 1rem;
+        margin-top: 1rem;
+      }
+      .checkout-btn {
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: 1rem;
+      }
+      .empty-cart {
+        text-align: center;
+        padding: 3rem 0;
+        color: var(--color-text-light);
+      }
+      @media (max-width: 768px) {
+        .cart-layout {
+          grid-template-columns: 1fr;
+        }
+        .cart-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .cart-img {
+          margin-bottom: 1rem;
+        }
+        .cart-actions {
+          margin-top: 1rem;
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+          Sapres<span>Sarl</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/">Accueil</a>
+          <a href="/about.html">À propos</a>
+          <a href="/services.html">Services</a>
+          <a href="/shop.html">Boutique</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <a href="/cart.html" class="cart-icon">
+            <i data-lucide="shopping-cart"></i>
+            <span class="cart-count" id="global-cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Votre Panier</h1>
+      </div>
+    </div>
+
+    <section class="section section-bg">
+      <div class="container">
+        <div class="cart-layout">
+          <div class="cart-items" id="cart-container">
+            <!-- Items injected via cart.js -->
+          </div>
+          
+          <div class="cart-summary">
+            <h3>Résumé de la commande</h3>
+            <div class="summary-row" style="margin-top: 1.5rem;">
+              <span>Sous-total</span>
+              <span id="cart-total">0 FCFA</span>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--color-text-light); margin-bottom: 1rem;">Taxes et frais de livraison calculés à l'étape suivante.</p>
+            <div class="summary-total summary-row">
+              <span>Total estimé</span>
+              <span id="cart-total-final">--</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" onclick="alert('Fonctionnalité de paiement à venir !')">Demander un Devis</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      lucide.createIcons();
+      // Simple sync between total and final total
+      setInterval(() => {
+        const total = document.getElementById('cart-total');
+        const final = document.getElementById('cart-total-final');
+        if(total && final) final.textContent = total.textContent;
+      }, 500);
+    </script>
+    <script type="module" src="/cart.js"></script>
+  </body>
+</html>

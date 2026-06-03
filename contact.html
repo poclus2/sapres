@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sapres Sarl</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .page-header {
+        padding: 8rem 0 4rem;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .page-header h1 {
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        margin-bottom: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header sticky" id="main-header" style="position: sticky; background: white; border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <a href="/" class="logo">
+          <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+          Sapres<span>Sarl</span>
+        </a>
+        <nav class="nav-links" style="background: var(--color-bg-alt); box-shadow: none;">
+          <a href="/">Accueil</a>
+          <a href="/about.html">À propos</a>
+          <a href="/services.html">Services</a>
+          <a href="/shop.html">Boutique</a>
+        </nav>
+        <div class="header-actions">
+          <a href="/contact.html" class="btn btn-primary">Contactez-nous</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" style="min-height: 50vh;">
+      <div class="page-header">
+        <h1>Contactez-nous</h1>
+        <p style="color: var(--color-text-light);">Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
+      </div>
+      <div class="text-center">
+        <p style="font-size: 1.25rem;">Email: contact@sapres-sarl.com</p>
+        <p style="font-size: 1.25rem;">Téléphone: +237 6 99 99 13 01</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <i data-lucide="sun-medium" style="color: var(--color-primary)"></i>
+              Sapres<span>Sarl</span>
+            </div>
+            <p class="footer-text">Restez informé sur l'énergie solaire, les conseils de l'industrie et nos dernières offres.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Sapres Sarl. Tous droits réservés.</div>
+        </div>
+      </div>
+    </footer>
+    <script>lucide.createIcons();</script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
