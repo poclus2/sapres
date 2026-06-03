@@ -11,5 +11,9 @@
   },
   "dependencies": {
     "vite": "^8.0.12"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }
