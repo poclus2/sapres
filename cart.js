@@ -43,7 +43,7 @@ function renderCart() {
   });
   
   cartContainer.innerHTML = html;
-  cartTotalEl.textContent = \`\${total.toLocaleString('fr-CM')} FCFA\`;
+  cartTotalEl.textContent = `${total.toLocaleString('fr-CM')} FCFA`;
   
   if (window.lucide) {
     lucide.createIcons();

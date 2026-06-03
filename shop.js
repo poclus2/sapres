@@ -72,7 +72,7 @@ function addToCart(productId) {
   updateCartCount();
   
   // Show toast or alert
-  alert(\`\${product.name} ajouté au panier !\`);
+  alert(`${product.name} ajouté au panier !`);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
